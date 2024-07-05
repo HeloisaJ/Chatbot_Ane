@@ -1,0 +1,189 @@
+{
+  "": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 91
+  },
+  "utter_terminar_sessao": {
+    "precision": 0.054945054945054944,
+    "recall": 1.0,
+    "f1-score": 0.10416666666666666,
+    "support": 5
+  },
+  "action_dicas_P7": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_pergunta_dica3": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5
+  },
+  "action_dicas_P3": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_segunda_pergunta": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_dicas_P4": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_iamabot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "action_dicas_P1": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "action_dicas_P5": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_resultado": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "utter_fomo_dicas": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_terceira_pergunta": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_set_reminder": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "utter_primeira_pergunta": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 92
+  },
+  "utter_goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_dicas_P6": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "action_dicas_P9": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "utter_pergunta_dica1": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5
+  },
+  "action_dicas_P2": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_pergunta_dica2": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5
+  },
+  "utter_linkteste": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "action_dicas_P8": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "action_questionario": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "utter_greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 14
+  },
+  "micro avg": {
+    "precision": 0.5351351351351351,
+    "recall": 0.358695652173913,
+    "f1-score": 0.42950108459869846,
+    "support": 276
+  },
+  "macro avg": {
+    "precision": 0.11314611314611314,
+    "recall": 0.14814814814814814,
+    "f1-score": 0.11496913580246915,
+    "support": 276
+  },
+  "weighted avg": {
+    "precision": 0.3415750915750916,
+    "recall": 0.358695652173913,
+    "f1-score": 0.3424667874396135,
+    "support": 276
+  },
+  "accuracy": 0.358695652173913,
+  "conversation_accuracy": {
+    "accuracy": 0.1,
+    "correct": 1,
+    "with_warnings": 0,
+    "total": 10
+  }
+}

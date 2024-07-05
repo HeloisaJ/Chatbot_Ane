@@ -1,0 +1,384 @@
+version: "3.1"
+stories:
+- story: teste path (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria de fazer o teste de dependêcia da internet
+      intent: teste
+  - action: utter_linkteste  # predicted: utter_terminar_sessao
+- story: dicas path 1 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      quais são as dicas de hoje
+      intent: dicas
+  - action: utter_pergunta_dica1  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P1  # predicted: utter_terminar_sessao
+  - user: |-
+      entendi
+      intent: continue
+  - action: action_dicas_P2  # predicted: utter_terminar_sessao
+  - user: |-
+      ok Ane
+      intent: continue
+  - action: action_dicas_P3  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza
+      intent: continue
+  - action: action_dicas_P4  # predicted: utter_terminar_sessao
+  - user: |-
+      ane quero nudge daqui a 1 hora
+      intent: ask_remind_call
+  - action: action_set_reminder  # predicted: utter_terminar_sessao
+  - user: |-
+      tá bom Ane
+      intent: continue
+  - action: utter_pergunta_dica2  # predicted: utter_terminar_sessao
+  - user: |-
+      muito ruim
+      intent: resposta
+  - action: action_dicas_P5  # predicted: utter_terminar_sessao
+  - user: |-
+      tá joia Ane
+      intent: continue
+  - action: utter_fomo_dicas  # predicted: utter_terminar_sessao
+  - user: |-
+      tudo bem
+      intent: continue
+  - action: action_dicas_P6  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza Ane
+      intent: continue
+  - action: utter_pergunta_dica3  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P7  # predicted: utter_terminar_sessao
+  - user: |-
+      o que é isso
+      intent: deny
+  - action: action_dicas_P8  # predicted: utter_terminar_sessao
+  - user: |-
+      claro
+      intent: affirm
+  - action: action_dicas_P9  # predicted: utter_terminar_sessao
+  - user: |-
+      finalizar a sessão Ane
+      intent: fim
+  - action: utter_goodbye  # predicted: utter_terminar_sessao
+- story: dicas path 2 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      quais são as dicas de hoje
+      intent: dicas
+  - action: utter_pergunta_dica1  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P1  # predicted: utter_terminar_sessao
+  - user: |-
+      entendi
+      intent: continue
+  - action: action_dicas_P2  # predicted: utter_terminar_sessao
+  - user: |-
+      ok Ane
+      intent: continue
+  - action: action_dicas_P3  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza
+      intent: continue
+  - action: action_dicas_P4  # predicted: utter_terminar_sessao
+  - user: |-
+      não obrigado
+      intent: deny
+  - action: utter_pergunta_dica2  # predicted: utter_terminar_sessao
+  - user: |-
+      muito ruim
+      intent: resposta
+  - action: action_dicas_P5  # predicted: utter_terminar_sessao
+  - user: |-
+      tá joia Ane
+      intent: continue
+  - action: utter_fomo_dicas  # predicted: utter_terminar_sessao
+  - user: |-
+      tudo bem
+      intent: continue
+  - action: action_dicas_P6  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza Ane
+      intent: continue
+  - action: utter_pergunta_dica3  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P7  # predicted: utter_terminar_sessao
+  - user: |-
+      o que é isso
+      intent: deny
+  - action: action_dicas_P8  # predicted: utter_terminar_sessao
+  - user: |-
+      claro
+      intent: affirm
+  - action: action_dicas_P9  # predicted: utter_terminar_sessao
+  - user: |-
+      voltar ao menu principal
+      intent: retornarAoMenu
+  - action: utter_greet  # predicted: utter_terminar_sessao
+- story: dicas path 3 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria de ver as dicas
+      intent: dicas
+  - action: utter_pergunta_dica1  # predicted: utter_terminar_sessao
+  - user: |-
+      pular questão
+      intent: passarQuest
+  - action: utter_pergunta_dica2  # predicted: utter_terminar_sessao
+  - user: |-
+      passar questão
+      intent: passarQuest
+  - action: utter_pergunta_dica3  # predicted: utter_terminar_sessao
+  - user: |-
+      passar para a próxima questão
+      intent: passarQuest
+  - action: utter_terminar_sessao
+  - user: |-
+      gostaria de ir ao menu
+      intent: retornarAoMenu
+  - action: utter_greet  # predicted: utter_terminar_sessao
+- story: dicas path 4 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      quais são as dicas de hoje
+      intent: dicas
+  - action: utter_pergunta_dica1  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P1  # predicted: utter_terminar_sessao
+  - user: |-
+      entendi
+      intent: continue
+  - action: action_dicas_P2  # predicted: utter_terminar_sessao
+  - user: |-
+      ok Ane
+      intent: continue
+  - action: action_dicas_P3  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza
+      intent: continue
+  - action: action_dicas_P4  # predicted: utter_terminar_sessao
+  - user: |-
+      não obrigado
+      intent: deny
+  - action: utter_pergunta_dica2  # predicted: utter_terminar_sessao
+  - user: |-
+      muito ruim
+      intent: resposta
+  - action: action_dicas_P5  # predicted: utter_terminar_sessao
+  - user: |-
+      tá joia Ane
+      intent: continue
+  - action: utter_fomo_dicas  # predicted: utter_terminar_sessao
+  - user: |-
+      tudo bem
+      intent: continue
+  - action: action_dicas_P6  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza Ane
+      intent: continue
+  - action: utter_pergunta_dica3  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P7  # predicted: utter_terminar_sessao
+  - user: |-
+      o que é isso
+      intent: deny
+  - action: action_dicas_P8  # predicted: utter_terminar_sessao
+  - user: |-
+      prefiro não
+      intent: deny
+  - action: utter_terminar_sessao
+  - user: |-
+      voltar ao menu principal
+      intent: retornarAoMenu
+  - action: utter_greet  # predicted: utter_terminar_sessao
+- story: dicas path 5 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      quais são as dicas de hoje
+      intent: dicas
+  - action: utter_pergunta_dica1  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P1  # predicted: utter_terminar_sessao
+  - user: |-
+      entendi
+      intent: continue
+  - action: action_dicas_P2  # predicted: utter_terminar_sessao
+  - user: |-
+      ok Ane
+      intent: continue
+  - action: action_dicas_P3  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza
+      intent: continue
+  - action: action_dicas_P4  # predicted: utter_terminar_sessao
+  - user: |-
+      não obrigado
+      intent: deny
+  - action: utter_pergunta_dica2  # predicted: utter_terminar_sessao
+  - user: |-
+      muito ruim
+      intent: resposta
+  - action: action_dicas_P5  # predicted: utter_terminar_sessao
+  - user: |-
+      tá joia Ane
+      intent: continue
+  - action: utter_fomo_dicas  # predicted: utter_terminar_sessao
+  - user: |-
+      tudo bem
+      intent: continue
+  - action: action_dicas_P6  # predicted: utter_terminar_sessao
+  - user: |-
+      beleza Ane
+      intent: continue
+  - action: utter_pergunta_dica3  # predicted: utter_terminar_sessao
+  - user: |-
+      mais ou menos
+      intent: resposta
+  - action: action_dicas_P7  # predicted: utter_terminar_sessao
+  - user: |-
+      o que é isso
+      intent: deny
+  - action: action_dicas_P8  # predicted: utter_terminar_sessao
+  - user: |-
+      prefiro não
+      intent: deny
+  - action: utter_terminar_sessao
+  - user: |-
+      encerrar o programa Ane
+      intent: fim
+  - action: utter_goodbye  # predicted: utter_terminar_sessao
+- story: autoavaliacao path 1 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria de fazer a autoavaliação
+      intent: autoavaliacao
+  - action: utter_primeira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      ruim
+      intent: questao1
+  - action: utter_segunda_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      Mais de 2h
+      intent: questao2
+  - action: utter_terceira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      com certeza não
+      intent: questao3
+  - action: utter_resultado  # predicted: utter_terminar_sessao
+  - user: |-
+      sim
+      intent: affirm
+  - action: action_questionario  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria
+      intent: affirm
+  - action: utter_linkteste  # predicted: utter_terminar_sessao
+  - user: |-
+      voltar ao menu principal
+      intent: retornarAoMenu
+  - action: utter_greet  # predicted: utter_terminar_sessao
+- story: autoavaliacao path 2 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria de fazer a autoavaliação
+      intent: autoavaliacao
+  - action: utter_primeira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      ruim
+      intent: questao1
+  - action: utter_segunda_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      Mais de 2h
+      intent: questao2
+  - action: utter_terceira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      com certeza não
+      intent: questao3
+  - action: utter_resultado  # predicted: utter_terminar_sessao
+  - user: |-
+      nope
+      intent: deny
+  - action: utter_terminar_sessao
+  - user: |-
+      voltar ao menu principal
+      intent: retornarAoMenu
+  - action: utter_greet  # predicted: utter_terminar_sessao
+- story: autoavaliacao path 3 (.\tests\test_stories.yml)
+  steps:
+  - user: |-
+      oi
+      intent: start
+  - action: utter_greet  # predicted: utter_terminar_sessao
+  - user: |-
+      gostaria de fazer a autoavaliação
+      intent: autoavaliacao
+  - action: utter_primeira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      ruim
+      intent: questao1
+  - action: utter_segunda_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      Mais de 2h
+      intent: questao2
+  - action: utter_terceira_pergunta  # predicted: utter_terminar_sessao
+  - user: |-
+      com certeza não
+      intent: questao3
+  - action: utter_resultado  # predicted: utter_terminar_sessao
+  - user: |-
+      nope
+      intent: deny
+  - action: utter_terminar_sessao
+  - user: |-
+      terminar a sessão
+      intent: fim
+  - action: utter_goodbye  # predicted: utter_terminar_sessao

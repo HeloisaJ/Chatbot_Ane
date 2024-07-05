@@ -1,0 +1,41 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: pt
+
+pipeline:
+  - name: SpacyNLP
+    model: "pt_core_news_md"
+    case_sensitive: False
+  - name: SpacyTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 350
+    random_seed: 2
+  - name: EntitySynonymMapper
+  - name: FallbackClassifier
+    threshold: 0.5
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+
+policies:
+  - name: MemoizationPolicy
+    max_history: 3
+  - name: TEDPolicy
+    max_history: 3
+    epochs: 200
+    random_seed: 5
+    validation_split: 0.2
+  - name: RulePolicy
+    core_fallback_threshold: 0.6
+    core_fallback_action_name: "action_my_fallback"
+    enable_fallback_prediction: false

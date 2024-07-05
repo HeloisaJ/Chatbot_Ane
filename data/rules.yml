@@ -1,0 +1,152 @@
+version: "3.1"
+
+rules:
+
+- rule: /start
+  steps:
+  - intent: start
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
+
+- rule: Tentou limitar
+  steps:
+  - action: utter_tentou_limitar
+  - intent: affirm
+  - action: action_autorregulacao_5
+
+- rule: conection 1
+  steps:
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+
+- rule: conection 2
+  steps:
+  - action: utter_greet
+  - intent: autocontrole
+  - action: utter_tempo_na_internet
+
+- rule: conection 3
+  steps:
+  - action: utter_greet
+  - intent: autoconhecimento
+  - action: utter_autoconhecimento_opcoes
+
+- rule: conection 4
+  steps:
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+
+- rule: autorregulação
+  steps:
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+
+- rule: primeira pergunta
+  steps:
+  - action: utter_autoconhecimento_opcoes
+  - intent: autoavaliacao
+  - action: utter_primeira_pergunta
+
+- rule: segunda pergunta
+  steps:
+  - action: utter_primeira_pergunta
+  - intent: nivel
+  - action: utter_segunda_pergunta
+
+- rule: questionario
+  steps:
+  - action: utter_segunda_pergunta
+  - intent: questao
+  - action: action_questionario
+
+- rule: fisico
+  steps:
+  - action: utter_dicas_opcoes
+  - intent: bemEstarFisico
+  - action: action_dicas_1
+
+- rule: mental
+  steps:
+  - action: utter_dicas_opcoes
+  - intent: bemEstarMental
+  - action: action_dicas_2
+
+- rule: cognitivo
+  steps:
+  - action: utter_dicas_opcoes
+  - intent: bemEstarCognitivo
+  - action: action_dicas_3
+
+- rule: social
+  steps:
+  - action: utter_dicas_opcoes
+  - intent: bemEstarSocial
+  - action: action_dicas_4
+
+- rule: emocional
+  steps:
+  - action: utter_dicas_opcoes
+  - intent: bemEstarEmocional
+  - action: action_dicas_5
+
+- rule: fisico 2
+  steps:
+  - action: action_dicas_1
+  - intent: affirm
+  - action: action_lembretes_1
+
+- rule: mental 2
+  steps:
+  - action: action_dicas_2
+  - intent: affirm
+  - action: action_lembretes_2
+
+- rule: cognitivo 2
+  steps:
+  - action: action_dicas_3
+  - intent: affirm
+  - action: action_lembretes_3
+
+- rule: social 2
+  steps:
+  - action: action_dicas_4
+  - intent: affirm
+  - action: action_lembretes_4
+
+- rule: emocional 2
+  steps:
+  - action: action_dicas_5
+  - intent: affirm
+  - action: action_lembretes_5
+
+- rule: remind call
+  steps:
+  - intent: ask_remind_call
+  - action: action_set_reminder
+
+- rule: forget reminder
+  steps:
+  - intent: ask_forget_reminders
+  - action: action_forget_reminders
+
+- rule: react to reminder
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_to_reminder

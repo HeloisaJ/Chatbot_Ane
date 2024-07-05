@@ -1,0 +1,270 @@
+version: "3.1"
+
+intents:
+  - start
+  - retornarAoMenu
+  - goodbye
+  - affirm
+  - deny
+  - autorregulacao
+  - autocontrole
+  - autoconhecimento
+  - dicas
+  - autoavaliacao
+  - teste
+  - nivel
+  - questao
+  - bemEstarFisico
+  - bemEstarMental
+  - bemEstarCognitivo
+  - bemEstarSocial
+  - bemEstarEmocional
+  - fim
+  - ask_forget_reminders
+  - ask_remind_call
+  - EXTERNAL_reminder
+  - bot_challenge
+
+actions:
+  - action_questionario
+  - action_autorregulacao_1
+  - action_autorregulacao_2
+  - action_autorregulacao_3
+  - action_autorregulacao_4
+  - action_autorregulacao_5
+  - action_autorregulacao_6
+  - action_autocontrole_1
+  - action_dicas_1
+  - action_dicas_2
+  - action_dicas_3
+  - action_dicas_4
+  - action_dicas_5
+  - action_lembretes_1
+  - action_lembretes_2
+  - action_lembretes_3
+  - action_lembretes_4
+  - action_lembretes_5
+  - action_convite_deny
+  - action_lembrete_deny
+  - action_set_lembretes
+  - action_set_reminder
+  - action_react_to_reminder
+  - action_forget_reminders
+  - action_my_fallback
+
+entities:
+  - time
+  - number
+  - hora
+  - quest
+
+slots:
+  tipoLembrete:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+      - type: custom
+  lembreteSet:
+    type: bool
+    initial_value: False
+    influence_conversation: false
+    mappings:
+      - type: custom
+  time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time
+  number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: number
+  hora:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: hora
+  quest:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: quest
+
+responses:
+  utter_greet:
+  - text: "Olá, eu sou a Ane, sua assistente virtual. Estou aqui para te ajudar entender seu padrão de uso da internet e te auxiliar no processo de autorregulação. Selecione ou digite qual a opção que você deseja: "
+    buttons:
+    - title: "Autorregulação"
+      payload: '/autorregulacao'
+    - title: "Autocontrole"
+      payload: '/autocontrole'
+    - title: "Autoconhecimento"
+      payload: '/autoconhecimento'
+    - title: "Dicas"
+      payload: '/dicas'
+
+# Autorregulação
+
+  utter_preocupacao_internet:
+  - text: "Você está preocupado com o seu uso da internet ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_desempenho_escolar:
+  - text: "Você têm notado uma queda no seu desempenho escolar/acadêmico ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_efeito_na_vida:
+  - text: "Você tem percebido algum efeito negativo na sua vida pessoal ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_tentou_limitar:
+  - text: "Você já tentou limitar seu tempo online ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_ja_tentou_limitar:
+  - text: "Você já tentou limitar seu tempo online ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_capacidade_concentracao:
+  - text: "Você tem dificuldade em se concentrar ou lembrar das coisas ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_motivacao:
+  - text: "Você se sente desmotivado para realizar atividades como estudo ou trabalho?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_motivacao_2:
+  - text: "Você se sente desmotivado para realizar atividades como estudo ou trabalho?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_motivacao_deny:
+  - text: "Procure identificar o que tem levado a você a ter tido uma queda em seu desempenho acadêmico. Você pode dedicar um tempo longe da internet para refletir sobre essa questão. Caso não encontre a resposta, procure ajuda profissional. Digite retornar ao menu para ver mais opções"
+
+  utter_tentou_limitar_affirm:
+  - text: "Parabéns por já ter tentado limitar seu tempo online! Continue limitando seu tempo de uso da internet e das redes sociais, incluindo outras atividades em sua rotina diária para ajudar a melhorar sua cognição e desempenho acadêmico. Digite retornar ao menu para ver mais opções"
+
+# Autocontrole
+
+  utter_tempo_na_internet:
+  - text: "Você sente que passa muito tempo usando a internet ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_tempo_na_internet_affirm:
+  - text: "A falta de autocontrole pode levar ao uso problemático da internet e causar impactos negativos para a saúde. É importante estabelecer limites de tempo e buscar outras atividades para realizar. Você sabe quais são os riscos do uso execessivo da internet ?"
+    buttons:
+    - title: "Sim"
+      payload: '/affirm'
+    - title: "Não"
+      payload: '/deny'
+
+  utter_riscos_affirm:
+  - text: "Parabéns! O uso excessivo da internet pode levar a problemas de saúde mental e física, como ansiedade, depressão, obesidade e problemas de visão. Ainda pode prejudicar em atividades cotidanas, como estudo, trabalho e lazer. Digite retornar ao menu principal para ver mais o que mais te espera."
+
+  utter_riscos_deny:
+  - text: "É importante estar ciente de que o uso excessivo da internet pode levar a problemas de saúde mental e física, como ansiedade, depressão, obesidade e problemas de visão. É importante equilibrar o uso da internet com outras atividades saudáveis. Você pode considerar aprender coisas novas, como se conectar com outras pessoas, se divertir ou estudar. Depois, pense em objetivos mais específicos dentro dessas categorias. Por exemplo, se você quer aprender coisas novas, um objetivo específico poderia ser assistir um vídeo para aprender um novo idioma toda semana. Digite retornar ao menu principal para ver mais o que mais te espera."
+
+# Autoconhecimento
+
+  utter_autoconhecimento_opcoes:
+  - text: "Qual caminho você prefere ?"
+    buttons:
+    - title: "Teste de Dependência da Internet"
+      payload: '/teste'
+    - title: "Autopercepção do Uso"
+      payload: '/autoavaliacao'
+
+  utter_linkteste:
+  - text: "Use este link para acessar o teste: https://dependenciadeinternet.com.br/teste.php. Quando quiser retornar ao menu inicial é só me dizer :)"
+
+  utter_primeira_pergunta:
+  - text: "Você acha que faz um uso leve, moderado ou grave da internet ?"
+    buttons:
+    - title: "Leve"
+      payload: '/nivel'
+    - title: "Moderado"
+      payload: '/nivel'
+    - title: "Grave"
+      payload: '/nivel'
+
+  utter_segunda_pergunta:
+  - text: "Certo. Quanto tempo você acha que passa conectado à internet ? Selecione uma das opções abaixo"
+    buttons:
+    - title: "Até 2h"
+      payload: '/questao{{"quest":"Até 2h"}}'
+    - title: "Entre 2h e 4h"
+      payload: '/questao{{"quest":"Entre 2h e 4h"}}'
+    - title: "Acima de 4h"
+      payload: '/questao{{"quest":"Acima de 4h"}}'
+
+# Dicas
+
+  utter_dicas_opcoes:
+  - text: "Qual dessas opções relacionadas a bem-estar e saúde mental você prefere ?"
+    buttons:
+    - title: "Bem-estar físico"
+      payload: '/bemEstarFisico'
+    - title: "Bem-estar mental"
+      payload: '/bemEstarMental'
+    - title: "Bem-estar cognitivo"
+      payload: '/bemEstarCognitivo'
+    - title: "Bem-estar social"
+      payload: '/bemEstarSocial'
+    - title: "Bem-estar emocional"
+      payload: '/bemEstarEmocional'
+
+# Outros
+
+  utter_fallback:
+  - text: "Desculpa, não entendi o que você disse, poderia reformular a sua afirmação ?"
+
+  utter_iamabot:
+  - text: "Eu sou um bot, construido por meio do Rasa, uma ferramenta open source para criação de chatbots !"
+
+  utter_goodbye:
+  - text: "Tchau! Tenha um bom dia!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

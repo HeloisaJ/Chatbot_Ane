@@ -1,0 +1,48 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"utter_tentou_limitar\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_tentou_limitar\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]": "action_autorregulacao_5",
+      "[{\"prev_action\": {\"action_name\": \"utter_tentou_limitar\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}, {\"prev_action\": {\"action_name\": \"action_autorregulacao_5\"}, \"user\": {\"intent\": \"affirm\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autocontrole\"}}]": "utter_tempo_na_internet",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autocontrole\"}}, {\"prev_action\": {\"action_name\": \"utter_tempo_na_internet\"}, \"user\": {\"intent\": \"autocontrole\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}]": "action_forget_reminders",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}, {\"prev_action\": {\"action_name\": \"action_forget_reminders\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"dicas\"}}]": "utter_dicas_opcoes",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"dicas\"}}, {\"prev_action\": {\"action_name\": \"utter_dicas_opcoes\"}, \"user\": {\"intent\": \"dicas\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autoconhecimento\"}}]": "utter_autoconhecimento_opcoes",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autoconhecimento\"}}, {\"prev_action\": {\"action_name\": \"utter_autoconhecimento_opcoes\"}, \"user\": {\"intent\": \"autoconhecimento\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"start\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"start\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autorregulacao\"}}]": "utter_preocupacao_internet",
+      "[{\"prev_action\": {\"action_name\": \"utter_greet\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"autorregulacao\"}}, {\"prev_action\": {\"action_name\": \"utter_preocupacao_internet\"}, \"user\": {\"intent\": \"autorregulacao\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}]": "action_react_to_reminder",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}, {\"prev_action\": {\"action_name\": \"action_react_to_reminder\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "utter_fallback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_fallback\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_remind_call\"}}]": "action_set_reminder",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_remind_call\"}}, {\"prev_action\": {\"action_name\": \"action_set_reminder\"}, \"user\": {\"intent\": \"ask_remind_call\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}, {\"prev_action\": {\"action_name\": \"action_forget_reminders\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}, {\"prev_action\": {\"action_name\": \"action_react_to_reminder\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"EXTERNAL_reminder\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_forget_reminders\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_fallback\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]"
+    ]
+  }
+}

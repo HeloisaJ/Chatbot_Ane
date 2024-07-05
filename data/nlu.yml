@@ -1,0 +1,225 @@
+version: "3.1"
+
+nlu:
+- intent: start
+  examples: |
+    - olá
+    - ola
+    - oi
+    - hey
+    - e aí
+    - bom dia
+    - boa tarde
+    - boa noite
+    - ei
+    - e aí mano
+
+- intent: retornarAoMenu
+  examples: |
+    - voltar ao menu principal
+    - gostaria de ir ao menu
+    - gostaria de voltar ao menu
+    - poderia me levar de volta ao menu
+    - voltar ao menu
+    - retornar ao menu
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - tchau tchau
+    - tchauzinho
+    - bye bye
+    - até mais
+    - a gente se vê
+    - tenha um bom dia
+    - tenha uma boa tarde
+    - tenha uma boa noite
+    - até logo Ane
+    - tchau Ane
+
+- intent: affirm
+  examples: |
+    - yes
+    - sim
+    - claro
+    - pode
+    - concordo
+    - tá certo
+    - sim, claro
+    - gostaria
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - não
+    - não obrigado
+    - prefiro não
+    - melhor não
+    - acho que não
+    - sinceramente não
+
+- intent: autorregulacao
+  examples: |
+    - gostaria de ver a opção de autorregulação
+    - autorregulação
+    - gostaria de ver a parte de autorregulação
+    - autorregulação por favor
+    - Ane escolho a opção de autorregulação
+    - Ane selecione a opção de autorregulação
+
+- intent: autocontrole
+  examples: |
+    - gostaria de ver a opção de autocontrole
+    - autocontrole
+    - gostaria de ver a parte de autocontrole
+    - autocontrole por favor
+    - Ane escolho a opção de autocontrole
+    - Ane selecione a opção de autocontrole
+
+- intent: autoconhecimento
+  examples: |
+    - gostaria de ver a opção de autoconhecimento
+    - autoconhecimento
+    - gostaria de ver a parte de autoconhecimento
+    - autoconhecimento por favor
+    - Ane escolho a opção de autoconhecimento
+    - Ane selecione a opção de autoconhecimento
+
+- intent: dicas
+  examples: |
+    - gostaria de ver as dicas
+    - quais são as dicas de hoje
+    - dicas
+    - quero as dicas
+    - gostaria de ver as dicas
+    - quais são as dicas de hoje
+    - dicas
+    - Ane quero ver as dicas
+
+- intent: autoavaliacao
+  examples: |
+    - gostaria de fazer a autoavaliação
+    - escolho o teste de autoavaliação
+    - autoavaliação
+    - quero a autoavaliação
+    - prefiro o teste de autoavaliação
+
+- intent: teste
+  examples: |
+    - gostaria de fazer o teste de dependêcia da internet
+    - escolho o teste de dependêcia
+    - teste de dependêcia
+    - quero fazer o teste de dependêcia
+    - prefiro fazer o teste de dependêcia
+
+- intent: nivel
+  examples: |
+    - Leve
+    - Moderado
+    - Grave
+    - acredito que leve
+    - acredito que moderado
+    - acredito que grave
+
+- intent: questao
+  examples: |
+    - Até 2h
+    - Entre 2h e 4h
+    - Acima de 4h
+
+- intent: bemEstarFisico
+  examples: |
+    - gostaria de ver dicas sobre bem-estar físico
+    - bem-estar físico
+    - escolho a opção de bem-estar físico
+    - gostaria de ver a opção de bem-estar físico
+    - prefiro a opção de bem-estar físico
+    - Ane selecione a opção de bem-estar físico
+    - Ane escolho a opção de bem-estar físico
+
+- intent: bemEstarMental
+  examples: |
+    - gostaria de ver dicas sobre bem-estar mental
+    - bem-estar mental
+    - escolho a opção de bem-estar mental
+    - gostaria de ver a opção de bem-estar mental
+    - prefiro a opção de bem-estar mental
+    - Ane selecione a opção de bem-estar mental
+    - Ane escolho a opção de bem-estar mental
+
+- intent: bemEstarCognitivo
+  examples: |
+    - gostaria de ver dicas sobre bem-estar cognitivo
+    - bem-estar cognitivo
+    - escolho a opção de bem-estar cognitivo
+    - gostaria de ver a opção de bem-estar cognitivo
+    - prefiro a opção de bem-estar cognitivo
+    - Ane selecione a opção de bem-estar cognitivo
+    - Ane escolho a opção de bem-estar cognitivo
+
+- intent: bemEstarSocial
+  examples: |
+    - gostaria de ver dicas sobre bem-estar social
+    - bem-estar social
+    - escolho a opção de bem-estar social
+    - gostaria de ver a opção de bem-estar social
+    - prefiro a opção de bem-estar social
+    - Ane selecione a opção de bem-estar social
+    - Ane escolho a opção de bem-estar social
+
+- intent: bemEstarEmocional
+  examples: |
+    - gostaria de ver dicas sobre bem-estar emocional
+    - bem-estar emocional
+    - escolho a opção de bem-estar emocional
+    - gostaria de ver a opção de bem-estar emocional
+    - prefiro a opção de bem-estar emocional
+    - Ane selecione a opção de bem-estar emocional
+    - Ane escolho a opção de bem-estar emocional
+
+- intent: fim
+  examples: |
+    - finalizar a sessão
+    - finalizar a sessão Ane
+    - terminar a sessão
+    - encerrar o programa
+    - encerrar o programa Ane
+
+- intent: ask_forget_reminders
+  examples: |
+    - Esqueça do lembrete
+    - Desative o lembrete
+    - Não me envie o lembrete
+    - Cancelar lembrete
+    - Poderia cancelar o lembrete por favor
+    - Ane cancele o lembrete
+    - Não me notifique mais!
+    - Não me notifique
+
+- intent: ask_remind_call
+  examples: |
+    - Me envie um lembrete em [5](number) [minutos](time)
+    - Lembrete de [30](number) [minutos](time)
+    - Ativar lembrete de [2](number) [horas](time)
+    - Me envie um lembrete daqui a [8](number) [horas](time)
+    - Gostaria de um lembrete daqui a [30](number) [segundos](time)
+    - Ane me envie um lembrete daqui a [30](number) [segundos](time)
+    - Ane ative um lembrete de [30](number) [segundos](time)
+    - Marcar lembrete para o [dia](time) [21/04](number)
+    - Ativar lembrete para o [dia](time) [05/10](number)
+    - Lembrete para o [dia](time) [10/02](number)
+    - Me envie um lembrete no [dia](time) [02/12](number)
+    - Gostaria de receber um lembrete no [dia](time) [13/06](number)
+    - Marcar lembrete para o [dia](time) [21/04](number) as [13:00](hora) horas
+    - ativar lembrete para o [dia](time) [05/10](number) as [18:10](hora)
+    - lembrete para o [dia](time) [10/02](number) as [06:30](hora)
+    - Me envie um lembrete no [dia](time) [02/12](number) as [12:00](hora) horas
+    - Preciso de um lembrete no [dia](time) [13/06](number) as [22:45](hora)
+
+- intent: bot_challenge
+  examples: |
+    - Você é um bot ?
+    - Você é um ser humano ?
+    - Estou falando com um bot ?
+    - Estou falando com um humano ?

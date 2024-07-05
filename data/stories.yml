@@ -1,0 +1,456 @@
+version: "3.1"
+
+stories:
+
+- story: goodbye path 1
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: autorregulacao path 1
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: affirm
+  - action: utter_ja_tentou_limitar
+  - intent: affirm
+  - action: utter_tentou_limitar_affirm
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 2
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: affirm
+  - action: utter_ja_tentou_limitar
+  - intent: deny
+  - action: utter_motivacao
+  - intent: affirm
+  - action: action_autorregulacao_1
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 3
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: affirm
+  - action: utter_ja_tentou_limitar
+  - intent: deny
+  - action: utter_motivacao
+  - intent: deny
+  - action: utter_motivacao_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 4
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: deny
+  - action: utter_capacidade_concentracao
+  - intent: affirm
+  - action: utter_tentou_limitar
+  - intent: affirm
+  - action: action_autorregulacao_5
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 5
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: deny
+  - action: utter_capacidade_concentracao
+  - intent: affirm
+  - action: utter_tentou_limitar
+  - intent: deny
+  - action: action_autorregulacao_4
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 6
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: deny
+  - action: utter_capacidade_concentracao
+  - intent: deny
+  - action: utter_motivacao_2
+  - intent: affirm
+  - action: action_autorregulacao_3
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 7
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: affirm
+  - action: utter_desempenho_escolar
+  - intent: deny
+  - action: utter_capacidade_concentracao
+  - intent: deny
+  - action: utter_motivacao_2
+  - intent: deny
+  - action: action_autorregulacao_2
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 8
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: deny
+  - action: utter_efeito_na_vida
+  - intent: deny
+  - action: action_autorregulacao_6
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 9
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: deny
+  - action: utter_efeito_na_vida
+  - intent: affirm
+  - action: utter_tentou_limitar
+  - intent: affirm
+  - action: action_autorregulacao_5
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autorregulacao path 10
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autorregulacao
+  - action: utter_preocupacao_internet
+  - intent: deny
+  - action: utter_efeito_na_vida
+  - intent: affirm
+  - action: utter_tentou_limitar
+  - intent: deny
+  - action: action_autorregulacao_4
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autocontrole path 1
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autocontrole
+  - action: utter_tempo_na_internet
+  - intent: affirm
+  - action: utter_tempo_na_internet_affirm
+  - intent: affirm
+  - action: utter_riscos_affirm
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autocontrole path 2
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autocontrole
+  - action: utter_tempo_na_internet
+  - intent: affirm
+  - action: utter_tempo_na_internet_affirm
+  - intent: deny
+  - action: utter_riscos_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autocontrole path 3
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autocontrole
+  - action: utter_tempo_na_internet
+  - intent: deny
+  - action: action_autocontrole_1
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autoconhecimento path 1
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autoconhecimento
+  - action: utter_autoconhecimento_opcoes
+  - intent: teste
+  - action: utter_linkteste
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: autoconhecimento path 2
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: autoconhecimento
+  - action: utter_autoconhecimento_opcoes
+  - intent: autoavaliacao
+  - action: utter_primeira_pergunta
+  - intent: nivel
+  - action: utter_segunda_pergunta
+  - intent: questao
+  - action: action_questionario
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 1
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarFisico
+  - action: action_dicas_1
+  - intent: affirm
+  - action: action_lembretes_1
+  - intent: affirm
+  - action: action_set_lembretes
+  - intent: ask_remind_call
+  - action: action_set_reminder
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 2
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarMental
+  - action: action_dicas_2
+  - intent: affirm
+  - action: action_lembretes_2
+  - intent: affirm
+  - action: action_set_lembretes
+  - intent: ask_remind_call
+  - action: action_set_reminder
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 3
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarCognitivo
+  - action: action_dicas_3
+  - intent: affirm
+  - action: action_lembretes_3
+  - intent: affirm
+  - action: action_set_lembretes
+  - intent: ask_remind_call
+  - action: action_set_reminder
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 4
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarSocial
+  - action: action_dicas_4
+  - intent: affirm
+  - action: action_lembretes_4
+  - intent: affirm
+  - action: action_set_lembretes
+  - intent: ask_remind_call
+  - action: action_set_reminder
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 5
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarEmocional
+  - action: action_dicas_5
+  - intent: affirm
+  - action: action_lembretes_5
+  - intent: affirm
+  - action: action_set_lembretes
+  - intent: ask_remind_call
+  - action: action_set_reminder
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 6
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarFisico
+  - action: action_dicas_1
+  - intent: affirm
+  - action: action_lembretes_1
+  - intent: deny
+  - action: action_lembrete_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 7
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarMental
+  - action: action_dicas_2
+  - intent: affirm
+  - action: action_lembretes_2
+  - intent: deny
+  - action: action_lembrete_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 8
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarCognitivo
+  - action: action_dicas_3
+  - intent: affirm
+  - action: action_lembretes_3
+  - intent: deny
+  - action: action_lembrete_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 9
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarSocial
+  - action: action_dicas_4
+  - intent: affirm
+  - action: action_lembretes_4
+  - intent: deny
+  - action: action_lembrete_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 10
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarEmocional
+  - action: action_dicas_5
+  - intent: affirm
+  - action: action_lembretes_5
+  - intent: deny
+  - action: action_lembrete_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 11
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarFisico
+  - action: action_dicas_1
+  - intent: deny
+  - action: action_convite_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 12
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarMental
+  - action: action_dicas_2
+  - intent: deny
+  - action: action_convite_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 13
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarCognitivo
+  - action: action_dicas_3
+  - intent: deny
+  - action: action_convite_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 14
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarSocial
+  - action: action_dicas_4
+  - intent: deny
+  - action: action_convite_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
+
+- story: dicas path 15
+  steps:
+  - intent: start
+  - action: utter_greet
+  - intent: dicas
+  - action: utter_dicas_opcoes
+  - intent: bemEstarEmocional
+  - action: action_dicas_5
+  - intent: deny
+  - action: action_convite_deny
+  - intent: retornarAoMenu
+  - action: utter_greet
